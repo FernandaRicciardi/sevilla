@@ -3,6 +3,7 @@ let video = document.getElementById("video1")
 let btnplay = document.getElementById("play")
 
 function play() {
+    video.volume = 0.5
     video.play()
     btnplay.setAttribute("src", "assets/pause.svg") 
     btnplay.setAttribute("onclick", "pause()")
@@ -30,11 +31,11 @@ function forwards5() {
 }
 
 function moreSpeed() {
-    video.playbackRate += 0.1
+    video.volume += 0.1
 }
 
 function lessSpeed() {
-    video.playbackRate -= 0.1
+    video.volume -= 0.1
 }
 
 // onmouseover="upbtn(this)" onmouseout="normalbtn(this)"
@@ -45,4 +46,15 @@ function upbtn(x) {
 
 function normalbtn(x) {
     x.style.top = "0px"
+}
+
+// onmouseover="showControls(this)" onmouseout="hideControls(this)
+
+let c = document.getElementById("ctrls")
+function showControls() {
+    c.style.opacity = "1"
+}
+
+function hideControls() {
+    c.style.opacity = "0"
 }
