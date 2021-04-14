@@ -30,11 +30,11 @@ function forwards5() {
     video.currentTime += 5
 }
 
-function moreSpeed() {
+function volume_up() {
     video.volume += 0.1
 }
 
-function lessSpeed() {
+function volume_down() {
     video.volume -= 0.1
 }
 
